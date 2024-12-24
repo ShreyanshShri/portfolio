@@ -19,7 +19,7 @@ import arrow_graphic from "/public/icons/arrow-graphic.svg"
 
 const Work = () => {
     return (
-        <div className="container px-20 py-12 mx-auto">
+        <div className="container px-20 py-12 mx-auto" id="projects">
             <Subtitle text="MY WORK" />
             <ProjectCard  
                 title="MyAttendance"

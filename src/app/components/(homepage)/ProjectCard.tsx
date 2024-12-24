@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { StaticImageData } from "next/image";
+
 import github_logo from "/public/icons/github.svg";
 import link_arrow from "/public/icons/link-arrow.svg";
 
@@ -30,20 +30,20 @@ const ProjectCard = ({title, desc, languages, github, link, image} : {title: str
                         })}
                         </div>
                         <div className="flex">
-                            <Link href={github}>
+                            <a target="_blank" href={github}>
                                 <Image
                                     src={github_logo}
                                     alt="github logo"
                                     className="w-6 h-6 mr-4 bg-white opacity-100"
                                 />
-                            </Link>                 
-                            <Link href={link}>
+                            </a>                 
+                            <a target="_blank" href={link}>
                                 <Image
                                     src={link_arrow}
                                     alt="link logo"
                                     className="w-6 h-6 mr-4 bg-white opacity-100"
                                 />
-                            </Link>
+                            </a>
                         </div>
                     </div>
                     </div>

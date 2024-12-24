@@ -1,5 +1,6 @@
 import Image from "next/image";
-import bgImg from "/public/images/image 10.png"
+
+import bgImg from "/public/images/image 10.png";
 
 import Navbar from "./components/(homepage)/Navbar";
 import Hero from "./components/(homepage)/Hero";

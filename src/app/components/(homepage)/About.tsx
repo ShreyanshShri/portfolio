@@ -1,6 +1,6 @@
 import Subtitle from "./Subtitle";
 import Image from "next/image";
-import Link from "next/link";
+
 import img from "/public/images/profile-pic.jpg";
 import github_logo from "/public/icons/github.svg";
 import twitter_logo from "/public/icons/twitter.svg"
@@ -8,7 +8,7 @@ import linkedin_logo from "/public/icons/linkedin.svg"
 
 const About = () => {
     return(
-        <div className="container px-20 py-12 mx-auto">
+        <div className="container px-20 py-12 mx-auto" id="about">
             <Subtitle text="ABOUT ME" />
             <div className="flex pt-5">
                 <div className="flex flex-col flex-auto w-1/3 items-center justify-center">
@@ -18,27 +18,27 @@ const About = () => {
                         className="w-4/5 rounded-full"
                     />
                     <div id="links" className="w-full max-w-56 px-8 mt-8 flex justify-around">
-                        <Link href={"https://github.com/shreyanshShri"}>
+                        <a target="_blank" href={"https://github.com/shreyanshShri"}>
                             <Image
                                 src={github_logo}
                                 alt="github logo"
                                 className="w-8 h-8"
                             />
-                        </Link>
-                        <Link href={"https://www.linkedin.com/in/shreyansh-shri/"}>
+                        </a>
+                        <a target="_blank" href={"https://www.linkedin.com/in/shreyansh-shri/"}>
                             <Image
                                 src={linkedin_logo}
                                 alt="linked logo"
                                 className="w-8 h-8"
                             />
-                        </Link>
-                        <Link href={"https://github.com/shreyanshShri"}>
+                        </a>
+                        <a target="_blank" href={"https://github.com/shreyanshShri"}>
                             <Image
                                 src={twitter_logo}
                                 alt="twitter logo"
                                 className="w-8 h-8"
                             />
-                        </Link>
+                        </a>
                     </div>
                 </div>
                 <div className="flex-auto w-2/3 text-justify opacity-70">

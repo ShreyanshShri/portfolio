@@ -1,9 +1,20 @@
+'use client';
 import Image from "next/image";
 import Link from "next/link";
 
 import logo from "/public/icons/ss-logo.svg";
 
 const Navbar = () => {
+
+    const downloadPDF = () => {
+        const link = document.createElement("a");
+        link.href = "./shreyansh-cv.pdf";
+        link.download = "Shreyansh-CV";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
+
     return (
         
 
@@ -22,10 +33,10 @@ const Navbar = () => {
                 className="dark:invert"
             />
             <div className="links flex justify-between items-center min-w-60">
-                <Link href={"/"}><span>About</span></Link>
-                <Link href={"/"}><span>Projects</span></Link>
-                <Link href={"/"}><span>CV</span></Link>
-                <Link href={"/"}><span>Contact</span></Link>
+                <Link href={"#about"}><span>About</span></Link>
+                <Link href={"#projects"}><span>Projects</span></Link>
+                <Link href={"/"}><span onClick={() => { downloadPDF() }}>CV</span></Link>
+                <Link href={"#contact"}><span>Contact</span></Link>
             </div>
         </nav>
 

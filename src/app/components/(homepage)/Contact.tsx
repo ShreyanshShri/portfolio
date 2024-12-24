@@ -1,10 +1,9 @@
-import Link from "next/link";
 import Image from "next/image";
 import Subtitle from "./Subtitle";
 
 import email_logo from "/public/icons/email.svg";
 import github_logo from "/public/icons/github.svg";
-import twitter_logo from "/public/icons/twitter.svg";
+// import twitter_logo from "/public/icons/twitter.svg";
 import linkedin_logo from "/public/icons/linkedin.svg";
 
 const Contact = () => {
@@ -28,7 +27,7 @@ const Contact = () => {
     ]
 
     return (
-        <div className="container px-20 py-12 mx-auto">
+        <div className="container px-20 py-12 mx-auto" id="contact">
             <Subtitle text="LET'S CONNECT" />
             <div className="wrapper flex flex-rowm mt-4">
                 <div className="w-1/2">
@@ -62,12 +61,12 @@ const Contact = () => {
                     {contactData.map((c, index) => {
                         return (
                             <div className="mt-4" key={index}>
-                            <Link href={c.link} style={{display: 'flex'}}>
+                            <a target="_blank" href={c.link} style={{display: 'flex'}}>
                                 <Image
                                     src={c.logo}
                                     alt="github logo"
                                     className="w-6 h-6"
-                            /><span className="ml-2">{c.text}</span></Link>
+                            /><span className="ml-2">{c.text}</span></a>
                         </div>
                         );
                     })}
