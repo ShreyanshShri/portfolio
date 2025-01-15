@@ -16,80 +16,101 @@ import cpp_logo from "/public/icons/cpp.svg"
 import python_logo from "/public/icons/python.svg"
 
 const Skills = () => {
+
+    const webList = [
+        {
+            src: mongodb_logo,
+            alt: "mongodv logo"
+        },
+        {
+            src: express_logo,
+            alt: "express logo"
+        },
+        {
+            src: react_logo,
+            alt: "react logo"
+        },
+        {
+            src: node_logo,
+            alt: "node logo"
+        },
+        {
+            src: next_logo,
+            alt: "next logo"
+        },
+    ];
+
+    const graphicsList = [
+        {
+            src: three_logo,
+            alt: "three logo"
+        },
+        {
+            src: p5_logo,
+            alt: "p5 logo"
+        },
+        {
+            src: figma_logo,
+            alt: "figma logo"
+        },
+    ];
+
+    const languagesList = [
+        {
+            src: js_logo,
+            alt: "js logo"
+        },
+        {
+            src: ts_logo,
+            alt: "ts logo"
+        },
+        {
+            src: rust_logo,
+            alt: "rust logo"
+        },
+        {
+            src: python_logo,
+            alt: "python logo"
+        },
+        {
+            src: cpp_logo,
+            alt: "cpp logo"
+        },
+    ];
+
     return (
-        <div className="container px-20 py-12 mx-auto">
+        <div className="container px-10 md:px-20 py-12 mx-auto">
             <Subtitle text="MY SKILLS" />
             <div id="skills">
                 <div id="web" className="flex mt-8">
-                    <Image
-                        src={mongodb_logo}
-                        alt="mongodb logo"
-                        className="w-10 h-10 mr-4"
-                    />
-                    <Image
-                        src={express_logo}
-                        alt="express logo"
-                        className="w-10 h-10 mr-4"
-                    />
-                    <Image
-                        src={react_logo}
-                        alt="react logo"
-                        className="w-10 h-10 mr-4"
-                    />
-                    <Image
-                        src={node_logo}
-                        alt="node logo"
-                        className="w-10 h-10 mr-4"
-                    />
-                    <Image
-                        src={next_logo}
-                        alt="next logo"
-                        className="w-10 h-10 mr-4"
-                    />
+                    {webList.map((el, index) => (
+                        <Image
+                            src={el.src}
+                            alt={el.alt}
+                            className="w-6 h-6 md:w-10 md:h-10 mr-4"
+                            key={index}
+                        />
+                    ))}
                 </div>
                 <div id="graphics" className="flex mt-8">
-                    <Image
-                        src={three_logo}
-                        alt="three logo"
-                        className="w-10 h-10 mr-4"
-                    />
-                    <Image
-                        src={p5_logo}
-                        alt="p5 logo"
-                        className="w-10 h-10 mr-4"
-                    />
-                    <Image
-                        src={figma_logo}
-                        alt="figma logo"
-                        className="w-10 h-10 mr-4"
-                    />
+                    {graphicsList.map((el, index) => (
+                        <Image
+                            src={el.src}
+                            alt={el.alt}
+                            className="w-6 h-6 md:w-10 md:h-10 mr-4"
+                            key={index}
+                        />
+                    ))}
                 </div>
                 <div id="languages" className="flex mt-8">
-                    <Image
-                        src={js_logo}
-                        alt="javascript logo"
-                        className="w-10 h-10 mr-4"
-                    />
-                    <Image
-                        src={ts_logo}
-                        alt="typescript logo"
-                        className="w-10 h-10 mr-4"
-                    />
-                    <Image
-                        src={python_logo}
-                        alt="python logo"
-                        className="w-10 h-10 mr-4"
-                    />
-                    <Image
-                        src={rust_logo}
-                        alt="rust logo"
-                        className="w-10 h-10 mr-4"
-                    />
-                    <Image
-                        src={cpp_logo}
-                        alt="cpp logo"
-                        className="w-10 h-10 mr-4"
-                    />
+                    {languagesList.map((el, index) => (
+                        <Image
+                            src={el.src}
+                            alt={el.alt}
+                            className="w-6 h-6 md:w-10 md:h-10 mr-4"
+                            key={index}
+                        />
+                    ))}
                 </div>
             </div>
         </div>

@@ -1,0 +1,29 @@
+nav::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+}
+
+/* .links {
+    background: rgba(0, 0, 0, .9);
+} */
+
+.links::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(320px);
+}
+
+@media screen and (max-width: 768px) {
+    .links::before {
+        backdrop-filter: blur(0px);
+    }
+}

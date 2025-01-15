@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 import Image from "next/image";
 import Subtitle from "./Subtitle";
 
@@ -24,29 +28,40 @@ const Contact = () => {
             link: "https://www.linkedin.com/in/shreyansh-shri/",
             text: "linkedin.com/in/shreyansh-shri"
         },
-    ]
+    ];
+
+    const [name, setName] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
 
     return (
-        <div className="container px-20 py-12 mx-auto" id="contact">
+        <div className="container px-10 md:px-20 py-12 mx-auto" id="contact">
             <Subtitle text="LET'S CONNECT" />
-            <div className="wrapper flex flex-rowm mt-4">
-                <div className="w-1/2">
+            <div className="wrapper flex flex-rowm mt-4 items-center flex-col md:flex-row">
+                <div className="w-full md:w-1/2">
                 <div className="form flex flex-col w-100 max-w-96">
                     <input type="text" placeholder="Name" style={{backgroundColor: "#393939"}} 
                     className="mt-4 
                                p-2 
                                text-white 
-                               rounded-md "/>
+                               rounded-md "
+                    value={name}
+                    onChange={(e: any) => setName(e.target.value)}
+                               />
                     <input type="email" placeholder="Email" style={{backgroundColor: "#393939"}} 
                     className="mt-4 
                                 p-2 
                                 text-white 
-                                rounded-md "/>
+                                rounded-md "
+                    value={email}
+                    onChange={(e: any) => setEmail(e.target.value)}
+                                />
                     <textarea name="" id="" style={{backgroundColor: "#393939"}} 
                     className="mt-4 
-                                py-4 
+                                py-2
+                                px-2 
                                 text-white 
-                                rounded-md "></textarea>
+                                rounded-md
+                                h-32 " placeholder="enter your message"></textarea>
                     <button 
                     className="mt-4
                                 py-2
@@ -57,7 +72,7 @@ const Contact = () => {
                                ">Send</button>
                 </div>
                 </div>
-                <div className="w-1/2 px-6 py-6 opacity-80">
+                <div className="w-full md:w-1/2 px-0 md:px-6 py-6 opacity-80 truncate">
                     {contactData.map((c, index) => {
                         return (
                             <div className="mt-4" key={index}>
