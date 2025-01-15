@@ -8,7 +8,7 @@ import logo from "/public/icons/ss-logo.svg";
 import hamburger from "/public/icons/hamburger.svg";
 import cross from "/public/icons/cross.svg";
 
-import "./Homepage.css";
+import "/src/app/components/(homepage)/homepage.css";
 
 const Navbar = () => {
 
