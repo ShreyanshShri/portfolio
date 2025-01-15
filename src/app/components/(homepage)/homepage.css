@@ -22,6 +22,10 @@ nav::before {
     backdrop-filter: blur(320px);
 }
 
+nav a {
+    opacity: 0.99;
+}
+
 @media screen and (max-width: 768px) {
     .links::before {
         backdrop-filter: blur(0px);
