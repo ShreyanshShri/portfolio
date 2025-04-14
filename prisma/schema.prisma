@@ -1,0 +1,52 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// datasource db {
+//   provider = "sqlite"
+//   url      = env("DATABASE_URL")
+// }
+
+// prisma/schema.prisma
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id       String @unique
+  password String
+  session  String @default("")
+}
+
+model Feedback {
+  id      String @id @default(uuid())
+  name    String
+  email   String
+  message String
+}
+
+model Project {
+  id          String  @id @default(uuid())
+  title       String
+  description String
+  slug        String  @unique
+  coverImage  String
+  skills      String?
+  github      String?
+  demo        String?
+}
+
+model Article {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  slug        String   @unique
+  coverImage  String
+  content     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
