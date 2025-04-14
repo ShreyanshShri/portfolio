@@ -11,10 +11,11 @@ type article = {
 	id: string;
 };
 
-const page = async ({ params }: { params: { slug: string } }) => {
+const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+	const { slug } = await params;
 	const article = (await prisma.article.findUnique({
 		where: {
-			slug: params.slug,
+			slug: slug,
 		},
 	})) as article;
 
