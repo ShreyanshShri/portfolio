@@ -2,8 +2,8 @@ import { prisma } from "@/lib/prisma";
 
 import Message from "@/components/admin/Message";
 import ArticleCard from "@/components/admin/ArticleCard";
-import Navbar from "@/components/homepage/Navbar";
 import Link from "next/link";
+import NavbarWrapper from "@/components/common/NavbarWrapper";
 
 type message = {
 	name: string;
@@ -32,7 +32,7 @@ const Admin = async () => {
 	})) as article[];
 	return (
 		<div id="admin">
-			<Navbar />
+			<NavbarWrapper />
 			<div className="container px-10 md:px-20 py-12 mx-auto">
 				<div className="messages mb-16">
 					<h2 className="text-2xl font-[family-name:var(--font-faculty-glyphic)]">
